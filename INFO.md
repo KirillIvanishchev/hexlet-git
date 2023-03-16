@@ -1,2 +1,2 @@
 git is awesome!
-new line
+No Code No Pain
