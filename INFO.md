@@ -1,5 +1,29 @@
 git commnds:
 #
+git --version						# Проверка версии
+
+git config --global user.name "имя фамилия"		# Создание имени учётной записи
+
+git config --global user.email "ваш емейл"		# Создание учётной записи
+
+ssh-keygen -t ed25519  -C "ваш емейл"			# Создание ssh-ключей
+
+eval "$(ssh-agent -s)"					# Запуск агента ssh, который следит за ключами
+
+ssh-add ~/.ssh/id_ed25519				# Добавления нового ssh-ключа в агент
+
+cat ~/.ssh/id_ed25519.pub				# Содержимое файла ключа (добавить на GitHub)
+
+#
+git remote add origin git@github.com:USERNAME/REPOSITORY.git			#создает соединение через SSH ключи
+
+git remote set-url origin https://github.com/USERNAME/REPOSITORY.git            #создает соединение через http протоколы
+
+git branch -M main								#создаёт и переименовывает текущую ветку на main
+
+git push -u origin main								#отправляет изменения в ветку (в данном случае main)
+
+#
 pwd							#Показывает текущий путь к директории
 
 cd	/ cd ..						#Переход к директории (через .. вернуться в предыдущую директорию)
